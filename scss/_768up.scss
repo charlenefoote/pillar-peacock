@@ -1,0 +1,369 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+
+
+/*********************
+GENERAL STYLES
+*********************/
+
+body {}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	width: 748px;
+}
+
+/*********************
+HEADER SYTLES
+*********************/
+
+.header {}
+
+	#logo {}
+	
+.site-header {
+	#tagline {
+		letter-spacing: .3em;
+	}	
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.main-menu {
+	ul#menu-main-menu li {
+		&:nth-of-type(1n) {
+			width: auto;
+		}
+		&:first-of-type, &:nth-of-type(2) {
+			border-bottom: none;
+		}
+		a {
+			border-left: 2px solid $green;
+			font-size: 15px;
+			letter-spacing: .1em;
+			padding: 12px 0 12px 0
+		}
+		
+		&#menu-item-68 a { width: 162px; }
+		&#menu-item-11 a { width: 200px; }
+		&#menu-item-13 a { width: 141px; }
+		&#menu-item-69 a { width: 96px; }
+		&#menu-item-10 a { width: 145px; }
+		
+		&:last-child a {
+			padding: 12px 18px;
+		}
+		&:nth-of-type(3) a {
+			border-left: 2px solid $green;
+		}
+	}
+	ul.social-icons {
+		li a {
+			padding: 12px 12px 12px 11px;
+		}
+		li:last-child a {
+			padding-left: 12px;
+		}
+	}
+}
+
+
+/*********************
+Pages
+*********************/
+
+.bios {
+	background-image: url(../images/bio-bg.svg);
+	background-position: top center; 
+	max-width: 840px;
+	margin: 0 auto 4em;
+	.wrap {
+		width: 748px;
+	}
+	.stack-wrap {
+		width: 100%;
+		margin: 0;
+		padding-top: 0;
+	}
+	.bio-left, .bio-right {
+		margin: 0 5%;
+		width: 40%;
+		h3 {
+			width: 100%;
+			float: left;
+			top: 6em;
+			left: 0;
+		}
+		p {
+			min-height: 24em;
+		}
+	}
+}	
+
+.bio-right {
+	margin-left: 0;
+}
+
+.home-tiles {
+	width: 748px;
+	.post {
+		&:nth-of-type(4n+1) {
+			width: 68%;
+		}
+		&:nth-of-type(4n+2) {
+			width: 30%;
+		}
+		&:nth-of-type(4n+3) {
+			width: 30%;
+		}
+		&:nth-of-type(4n+4) {
+			width: 68%;
+		}
+		.label-box {
+			bottom: 30px;
+		}
+	}
+}
+
+.label-box {
+	bottom: 30px;
+	font-size: .9em;
+}
+
+
+
+.page-template-blog-php .wrap.wide, .category .wrap.wide, .single .wrap.wide {
+	.tencol {
+		width: 100%;
+		float: left;
+	}
+}
+.floatbox {
+	float: none;
+	width: 100%;
+	margin: 0;
+	li.categories {
+		border: none;
+		h4 {
+			&:before {
+				content: "+";
+				padding-right: .25em;
+			}
+		}
+		ul {
+			background: none;
+			font-size: .7em;
+			padding: 0;
+			li {
+				font-size: 1.25em;
+				line-height: 1.05em;
+				margin: 0 1em;
+			}
+		}
+	}
+}
+
+
+/* Masonry Layout */
+.page-template-portfolio-php {
+	#container {
+		margin-left: -5px;
+    	width: 753px;
+	}
+	.brick {
+    	width: 241px;
+    	&:nth-child(2n+1) {
+    		margin: 0 5px 5px;
+    	}
+    	&:nth-child(2n+2) {
+    		margin: 0 5px 5px;
+    	}
+    	a {
+    		width: 241px;
+    		margin: 0;
+    		img {
+    			padding-right: 0;
+    		}
+    	}
+    }  
+}
+
+.process {
+	> div {
+		display: inline-table;
+		height: 18em;
+		padding-top: 2em;
+		&.step-number {
+			width: 12%;
+			height: 18em;
+			border-right: 2px solid $pink;
+			border-bottom: none;
+			text-align: left;
+			span {
+				padding: 1em 1.45em;
+				position: relative;
+				top: 7em;
+			}
+		}
+		&.step-titles {
+			border-right: 2px solid $pink;
+			width: 22%;
+			padding-left: 1%;
+			padding-right: 1%;
+			div {
+				margin: 18% auto 0;
+				padding: 0 2em;
+				height: 25%;
+				display: table-row;
+				position: relative;
+				text-align: center;
+				&.mobile-step-details {
+					display: none;
+				}
+
+			}
+		}
+		&.step-details {
+			width: 54%;
+			margin-left: 2%;
+			display: inline-table;
+			div {
+				height: 25%;
+				width: 80%;	
+				display: table-row;
+				margin: 4.95% auto 0;
+				text-align: left;
+				verticle-align: top;
+			}
+		}
+	}
+}
+
+.comment-form {
+	p {
+		width: 50%;
+		textarea {
+			width: 200%;
+		}
+	}
+}
+	
+.contact {
+	article {
+		display: inline-block;
+		margin: 0 1em 6em 0;
+		vertical-align: top;
+		width: auto;
+		&:nth-of-type(3) {
+			font-size: .9em;
+			margin-left: 10px;
+			margin-right: 0;
+			padding-top: 0;
+			width: 240px;
+			p {
+				line-height: 1.5em;
+			}
+		}
+	}
+}
+.wpcf7 {
+	textarea, input {
+		font-size: 1em;
+	}
+	input[type=submit] {
+		margin-top: 3.6125em;
+	}
+}
+
+.site-footer {
+	.wrap {
+		width: 600px;
+	}
+}
+
+/******************************************************************
+   Pinterest 
+******************************************************************/
+
+.post-content, .post {
+	.pinterest-pin {
+		border-bottom: 40px solid #fff;
+		border-left: 40px solid transparent;
+		border-right: 40px solid #fff;
+		border-top: 40px solid transparent;
+		bottom: 4px;
+		display: inline-block;
+		opacity: 0;
+		position: absolute;
+		right: 0;
+		@include transition(opacity 0.8s ease);
+		a {
+			/* Overwriting defualt pinterest styles with importants ... Relly Annoying */
+			background: transparent !important;
+			position: absolute !important;
+			top: -20px;
+			vertical-align: middle !important;
+			&:before {
+				background: url(../images/pin.svg) !important;
+				background-repeat: no-repeat;
+				content: "";
+				height: 21px;
+				position: absolute;
+				top: 5px;
+				right: 15px;
+				width: 16px;
+			}
+			span {
+				display: none !important;
+				height: 0 !important;
+				width: 0 !important;
+			}
+		}
+	}
+	&:hover {
+		.pinterest-pin {
+			opacity: 1;
+			@include transition(opacity 0.4s ease);
+		}
+	}
+	&.single {
+		.pinterest-pin {
+			a {
+				&:before {
+					right: 10px;
+					top: 20px;
+				}
+			}
+		}
+		&:hover {
+			.pinterest-pin {
+				opacity: 0;
+			}
+		}
+		p {
+			position: relative;
+			&:hover {
+				.pinterest-pin {
+					opacity: 1;
+					@include transition(opacity 0.4s ease);
+				}
+			}
+		}
+	}
+}

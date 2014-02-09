@@ -1,0 +1,118 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop. 
+
+******************************************************************/
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	width: 840px;
+}	
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.main-menu {
+	ul#menu-main-menu li {
+		a { letter-spacing: .3em; }
+		&#menu-item-68 a { width: 174px; }
+		&#menu-item-11 a { width: 215px; }
+		&#menu-item-13 a { width: 155px; }
+		&#menu-item-69 a { width: 130px; }
+		&#menu-item-10 a{ width: 162px; }
+	}
+	ul.social-icons {
+		li a {
+			padding: 12px 14px;
+		}
+		li:last-child a {
+			padding-left: 17px;
+		}
+	}
+
+}
+
+/*********************
+Pages
+*********************/
+.bios {
+	.wrap {
+		width: 840px;
+	}
+}
+
+.home-tiles {
+	width: 840px;
+}
+
+/* Masonry Layout */
+.page-template-portfolio-php {
+	#container {
+    	width: 849px;
+	}
+	.brick {
+    	width: 273px; 
+    	a {
+    		width: auto;
+    	}
+    }  
+}
+
+.page-template-blog-php .wrap.wide, .category .wrap.wide, .single .wrap.wide {
+	.first {
+		float: left;
+		margin: 0 0 0 7.5%;
+		width: 82.87292817100001%;
+	}
+	.floatbox {
+	}
+}
+
+.contact {
+	article {
+		&:nth-of-type(3) {
+			font-size: 1em;
+			margin-left: 29px;
+			padding-top: .5em;
+			width: 322px;
+			p {
+				line-height: 1.5em;
+			}
+		}
+	}
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.floatbox {
+	clear: none;
+	float: right;
+	padding-top: 0;
+	margin-right: -8%;
+	margin-left: 0;
+	width: auto;
+	li.categories {
+		margin-top: -1.15em;
+		h4 {
+			display: inline-block;
+		}
+		ul {
+			li {
+				font-size: .85em;
+				line-height: 1.95em;
+				display: block;
+			}
+		}
+	}
+}

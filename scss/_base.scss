@@ -1,0 +1,1116 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+******************************************************************/
+
+/*********************
+GENERAL STYLES
+*********************/
+
+body {
+	font-family: 'Montserrat', $sans-serif;
+	font-weight: 400;
+	position: relative;
+	margin: 0;
+	color: $darkgrey;
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	margin: 0 auto;
+	width: 300px;
+}	
+.box {
+	padding: 40px;
+	background: #FFF;
+}
+p {
+	-moz-hyphens: none;
+	hyphens: none;
+	-webkit-hyphens: none;
+}
+
+/*********************
+LINK STYLES
+*********************/
+
+a, a:visited, button{
+	color: $link-color;
+	text-decoration: none;
+	@include transition(all 0.2s ease-in-out);
+
+	/* on hover */
+	&:hover, &:focus {
+		color: $link-hover;
+		text-decoration: none;
+	}
+
+	/* on click */
+	&:active {
+
+	}
+
+	/* mobile tap color */
+	&:link {
+		/*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+	}
+}
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+	font-family: $sans-serif;
+	text-rendering: optimizelegibility;
+	font-weight: 300;
+	text-transform: uppercase;
+	/*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+
+	/* removing text decoration from all headline links */
+	a {
+		text-decoration: none;
+	}
+}
+
+h1, .h1 {
+	font-size: 3em;
+	line-height: 1.75em;
+}
+
+h2, .h2 {
+	font-size: 2.5em;
+	line-height: 1.25em;
+	margin-bottom: 0.375em;
+}
+
+h3, .h3 {
+	font-size: 1.125em;
+	font-weight: 600;
+}
+
+h4, .h4 {
+	font-size: .95em;
+	font-weight: 700;
+}
+
+h5, .h5 {
+	font-size: 0.846em;
+	line-height: 2.09em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+
+/******************************************************************
+FORM STYLES
+******************************************************************/
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+	box-shadow: none;
+	border: none;
+	padding: 10px 10px;
+	font-size: .85em;
+	font-family: $sans-serif;
+	font-weight: 300;
+	@include border-radius(0);
+	&:focus {
+		outline: 1px solid $gold;
+	}
+}
+
+textarea {
+	@include border-radius(0);
+	&:focus {
+		outline: 1px solid $gold;
+	}
+
+}
+
+input[type="submit"],
+button[type="submit"] { 
+	padding: 7px 10px;
+	text-transform: uppercase;
+	font-size: .75em;
+	font-family: $sans-serif;
+	background: $green;
+	color: $white;
+	border: none;
+	@include border-radius(0);
+	@include transition(all 0.2s ease-in-out);
+	&:hover {
+		background: $white;
+		color: $black;
+	}
+}
+
+/*********************
+GLOBAL STYLES
+*********************/
+a.text-link-frame, .text-frame {
+	background: url(../images/text-frame-bg.png) no-repeat left center;
+	padding: 10px 0 10px 50px;
+	margin-bottom: .75em;
+	font-size: 15px;
+	color: $gold;
+	letter-spacing: .3em;
+	border-bottom: 2px solid $gold;
+	text-transform: uppercase;	
+	float: left;
+}
+a.text-link-frame {
+	float: right;
+	margin: 1em 0;
+	&:hover {
+		color: $pink;
+		background-image: url(../images/text-frame-hover-bg.png);
+		border-bottom-color: $pink;
+	}
+}
+
+.button-box {
+	font-family: $sans-serif;
+	border: 3px solid $pink;
+	color: $pink;
+	font-weight: 300;
+	font-size: .875em;
+	letter-spacing: 2px;
+	margin: 0 auto;
+	padding: .7em;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	&:hover {
+		background: $pink;
+		color: $white;
+	}
+}
+
+.section-wrap {
+	text-align: center;
+	border-top: 2px $grey solid;
+	margin: 0 0 140px;
+}
+
+.section-title {
+	padding: 10px 30px;
+	margin: 0 0 2em;
+	background: $gold;
+	color: $darkgrey;
+	display: inline-block;
+	font-weight: 400;
+	font-size: .9em;
+	position: relative;
+	top: -20px;
+}
+
+
+/*********************
+HEADER SYTLES
+*********************/
+   
+.site-header {
+	h1 {
+		margin-top: .5em;
+		margin-bottom: 0;
+		height: 90px;
+		a {
+			display: block;
+			svg {
+				width: 100%;
+				height: 80px;
+			}
+		}
+	}
+	#tagline {
+		font-size: 12px;
+		font-weight: 700;
+		letter-spacing: 0;
+		background: $green;
+		color: $white;
+		margin: 2.75em 0 7em;
+		padding: .75em 0;
+		text-align: center;
+	}	
+}
+
+/* Pattern Styles */
+
+header ul.social-icons{
+	background: url(../images/pattern_victorian_border.png) 0 -16px repeat;
+}
+
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.main-menu { 
+	border: 2px solid $green;
+	ul#menu-main-menu {
+		float: left;
+		margin: 0;
+		border-bottom: 2px solid $green;
+		li {
+			list-style: none;
+			float: left;
+			text-align: center;
+			margin-left: 0;
+			&:first-of-type, &:nth-of-type(2) {
+				border-bottom: 2px solid $green;
+				margin: 0;
+				width: 50%;
+			}
+			&:nth-of-type(1n+3) {
+				width: 33.33%;
+			}
+			a {
+				text-decoration: none;
+				color: $green;
+				font-family: $sans-serif;
+				font-size: 12px;
+				letter-spacing: .15em;
+				text-transform: uppercase;
+				display: block;
+				border-left: 2px solid $green;
+				padding: 12px 0;
+				&:hover {
+					background: $green;
+					color: white;
+				}
+			}			
+			&:first-child a{
+				border-left: none;
+			}
+			&:last-child a{
+			}
+			&:nth-of-type(3) a {
+				border: none;
+			}
+		}	
+	}
+	ul.social-icons {
+		float: left;
+		margin: 0;
+		width: 100%;
+		li {
+			display: inline-block;
+			float: right;
+			a {
+				display: block;
+				text-decoration: none;
+				padding: 12px 15px;
+				color: #FFF;
+				background: $green;
+			}
+			&:last-child a {
+				padding-left: 16px;
+			}
+		}
+	}
+}
+
+
+/*********************
+HOME PAGE STYLES
+*********************/
+.home-tiles {
+	clear: both;
+	margin: 0 auto;
+	width: 300px;
+	.post {
+		display: block;
+		float: left;
+		overflow: hidden;
+		position: relative;
+		img {
+			float: left;
+			width: 100%;
+		}
+		&:nth-of-type(4n+1) {
+			margin: 0 auto 10px;
+			width: 300px;
+		}
+		&:nth-of-type(4n+2) {
+			margin: 0 5px 10px 0;
+			width: 145px;
+		}
+		&:nth-of-type(4n+3) {
+			margin: 0 0 10px 5px;
+			width: 145px;
+		}
+		&:nth-of-type(4n+4) {
+			margin: 0 auto 10px;
+			width: 300px;
+		}
+	}
+}
+
+/*********************
+PAGE & CONTENT STYLES
+*********************/
+
+.content-wrapper {
+	position: relative;
+	h2 {
+		&.text-frame {
+			margin: 0 0 1em 0;
+			float: left;
+		}
+	}
+	a {
+		&.text-frame {
+			float: right;
+			margin: 2.75em 0;
+		}
+	}
+}
+
+.page-intro {
+	color: $darkgrey;
+	font-size: 1em;
+	font-weight: normal;
+	line-height: 2em;
+	margin: 0 0 3em;
+	text-align: center;
+}
+.extra-space {
+	margin: 3em 10%;
+}
+
+.label-box {
+	bottom: 10px;
+	color: $white;		
+	font-size: .75em;
+	margin: 0 10%;
+	position: absolute;
+	text-align: center;
+	z-index: 50;
+	width: 80%;
+	span {
+		border: solid 2px $white;
+		display: block;
+		padding: .5em;
+	}
+}
+
+/* Masonry Layout */
+
+.page-template-portfolio-php {
+	#container {
+    	width: 300px; // width of the entire container for the wall
+	}
+	.brick {
+    	width: 300px;    	
+    	margin: 0;
+    	opacity: 0;
+    	@include transition(opacity .8s ease-in-out);
+    	&.masonry-brick {
+	    opacity: 1;
+    	@include transition(opacity .8s ease-in-out);
+    	}
+    	&:nth-child(2n+1) {
+    		margin-right: 2px;
+    	}
+    	&:nth-child(2n+2) {
+    		margin-left: 2px;
+    	}
+    	img {
+	    	width: 300px;
+	    	height: auto;
+	    	@include transition(opacity 0.2s ease-in-out)
+    	}
+    	a {
+    		height: 100%;
+    		position: relative;
+    		float: left;
+    		&:hover img {
+    			opacity: .8;
+    		}
+    	}
+    	
+	}
+}
+
+/* Lightbox Style Overrides */
+
+#lightbox {
+	margin: 20px 0;
+	#hoverNav {
+		display: none !important;
+	}
+	p#controls {
+		display: none !important;
+	}
+	#caption {
+		display: block;
+		margin: 0 0 10px;
+	}
+}
+
+.page-image {
+	margin: 0 0 6em;
+	padding: 0 1em;
+	width: 100%;
+	border-top: 2px solid $gold;
+	border-bottom: 2px solid $gold;
+	img {
+		width: 94%;
+		padding: 1.2em 1em;
+		border-right: 2px solid $gold;
+		border-left: 2px solid $gold;
+		display: block;
+		margin: 0 3%;
+	}
+}
+
+/*********************
+ABOUT/MEET & GREET STYLES
+*********************/
+
+.bios {	
+	position: relative;
+	padding: 4.5em 0;
+	margin-bottom: 6em;
+	text-align: center;
+	.wrap {
+		width: 100%;
+		
+	}
+	.bio-left, .bio-right {
+		color: $reallydarkgrey;
+		font-size: .875em;
+		line-height: 1.75em;
+		p {
+			-moz-hyphens: none;
+			hyphens: none;
+			-webkit-hyphens: none;
+			margin: 2em 0 2em;
+			text-align: left;
+		}
+	}
+	.bio-left {
+		background-color: $darkyellow;
+	}
+	.bio-right {
+		background-color: $lightyellow;	
+	}
+	.stack-wrap {
+		width: 300px;
+		margin: 0 auto;
+		position: relative;
+		padding-top: 5em;
+	}
+	
+	#tennessee, #virginia {
+		height: 6.5em;
+		margin: 0 10% 2em;
+		width: 80%;
+	}
+	
+	#tennessee {
+		margin: 2em 0 0;
+	}
+	
+	h3 {
+		border: 3px solid $pink;
+		color: $pink;
+		font-weight: 300;
+		letter-spacing: 0;
+		margin: 0;
+		padding: .7em;
+		text-align: center;
+		text-transform: uppercase;
+		top: 10em;
+		position: absolute;
+		width: 60%;
+		left: 20%;
+	}
+}
+
+.page-template-meet-php {
+	a.button-box {
+		margin: 6em auto 4em;
+		display: block;
+		width: 70%;
+		color: $pink;
+		&:before {
+			border-right: 8px solid transparent;
+			border-left: 8px solid transparent;
+			border-top: 8px solid $pink;
+			content: "";
+			left: 50%;
+			margin: 0 auto 0 -8px;
+			position: absolute;
+			top: -3em;
+		}
+		&:hover {
+			color: $white;
+		}
+	}
+}
+
+.image-map {
+	position: relative;
+}
+
+.poi-list {
+	margin: 0;
+	li { 
+		display: none;
+	}
+}    
+
+.process-lead {
+	margin-top: -60px;
+	h5 { text-align: center; margin: 3em 0; }
+	p {
+		margin: 0;
+		line-height: 2em;
+		text-align: center;
+	}
+}
+
+
+/*********************
+BLOG POST & CONTENT STYLES
+*********************/
+
+.page-template-blog-php .wrap.wide, .category .wrap.wide, .single .wrap.wide {
+	float: right;
+	.first {
+		float: none;
+		margin: 0 auto;
+	}
+}
+
+hr {
+	background: #ccc;
+	border: none;
+	height: 1px;
+	margin: 4em 0;
+}
+
+.post-content {
+	@extend .section-wrap;
+	.post-title {
+		@extend .section-title;
+		a {
+			color: $darkgrey;
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+	.post-comments {
+		color: $green;
+		margin: 0 0 20px 0;
+	}
+	.post-img {
+		position: relative;
+	}
+	img {
+		width: 100%;
+		height: auto;
+	}
+	p {
+		text-align: left;
+		font-size: .8em;
+		font-weight: 400;
+		line-height: 2em;
+		a:hover {
+			color: $pink;
+		}
+	}
+	.text-link-frame {
+		font-size: .9em;
+		margin: 20px 0 0;
+		padding-right: 20px;
+		float: left;
+	}
+}
+
+.post-nav {
+	text-align: center;
+	a {
+		font-family: $sans-serif;
+		border: 3px solid $pink;
+		color: $pink;
+		font-weight: 300;
+		font-size: .875em;
+		letter-spacing: 2px;
+		margin: 0 auto;
+		padding: .7em 4em;
+		position: relative;
+		text-align: center;
+		text-transform: uppercase;
+		&:first-child:after {
+			content: "";
+			position: absolute;
+			left: 2.5em;
+			top: .95em;
+			border-top: 6px solid transparent;
+			border-bottom: 6px solid transparent;
+			border-right: 9px solid $pink;
+		}
+		&:hover {
+			background: $pink;
+			color: $white;
+			&:first-child:after {
+				content: "";
+				position: absolute;
+				left: 2.5em;
+				top: .95em;
+				border-top: 6px solid transparent;
+				border-bottom: 6px solid transparent;
+				border-right: 9px solid $white;
+			}
+		}
+	}
+}
+
+.post-prev-nav, .post-next-nav {
+	text-align: center;
+	width: 35%;
+	a {
+		font-family: $sans-serif;
+		border: 2px solid $pink;
+		color: $pink;
+		display: block;
+		font-weight: 300;
+		font-size: .75em;
+		letter-spacing: 1px;
+		padding: .7em 2em;
+		position: relative;
+		text-align: center;
+		text-transform: uppercase;
+		&:after {
+			content: "";
+			position: absolute;
+			top: .75em;
+			border-top: 6px solid transparent;
+			border-bottom: 6px solid transparent;
+		}
+		&:hover {
+			background: $pink;
+			color: $white;
+		}
+	}
+}
+.post-prev-nav {
+	float: left;
+	a {
+		&:after {
+			left: 1em;
+			border-right: 9px solid $pink;
+		}
+		&:hover {
+			&:after {
+				border-right: 9px solid $white;
+			}
+		}
+	}
+}
+.post-next-nav {
+	float: right;
+	a {
+		&:after {
+			right: 1em;
+			border-left: 9px solid $pink;
+		}
+		&:hover {
+			&:after {
+				border-left: 9px solid $pink;
+			}
+		}
+	}
+}
+
+/******************************************************************
+   Pinterest 
+******************************************************************/
+.post-content, .post {
+	.pinterest-pin {
+		display: none;
+		a {
+			/* Overwriting defualt pinterest styles with importants ... Really Annoying */
+			position: absolute !important;
+			vertical-align: middle !important;
+			span {
+				display: none !important;
+				height: 0 !important;
+				width: 0 !important;
+			}
+		}
+	}
+}
+
+/******************************************************************
+   Comments 
+******************************************************************/
+
+.commentmetadata {
+	display: none;
+}
+
+.comment {
+	background: #E6E7E8;
+	color: $lightgrey;
+	font-size: 13px;
+	padding: 20px 30px;
+	p {
+		font-size: 13px;
+		line-height: 23px;
+		margin-bottom: 0;
+	}
+}
+
+.comment-author {
+	font-weight: 700;
+	margin-bottom: 20px;
+	text-align: left;
+	cite {
+		color: $darkgrey;
+		font-size: 12px;
+		font-style: normal;
+		text-transform: uppercase;
+	}
+	.says {
+		display: none;
+	}
+}
+
+.comment-notes {
+	display: none;
+}
+
+.comment-respond {
+	margin: 4em 0;
+}
+
+#reply-title {
+	font-size: .9em;
+	font-weight: 400;
+	text-align: left;
+}
+
+.comment-form {
+	p {
+		margin: 2em 0;
+		width: 100%;
+		input, textarea {
+			background: #E6E7E8;
+			border: none;
+			font-size: .9em;
+			padding: 20px;
+		}
+		input {
+			width: 100%;
+		}
+		textarea {
+			height: 14em;
+			width: 100%;
+		}
+	}
+	input[type=submit] {
+		font-family: $sans-serif;
+		background: #fff;
+		border: 3px solid $pink;
+		color: $pink;
+		float: left;
+		font-weight: 300;
+		font-size: .875em;
+		letter-spacing: 2px;
+		padding: .7em 4em;
+		position: relative;
+		&:hover {
+			background: $pink;
+			color: $white;
+		}
+	}
+}
+
+
+/******************************************************************
+PROCESS STYLES
+******************************************************************/
+
+.process {
+	display: block;
+	position: relative;
+	width: 100%;
+	> div {
+		display: block;
+		width: 100%;
+		
+		&.step-number {
+			border-bottom: 2px solid $pink;
+			text-align: center;
+			width: 100%;
+			height: 3em;
+			span {
+				border: 2px solid $pink;
+				color: $pink;
+				margin: 0 auto 2em;
+				padding: .5em .75em;
+				position: relative;
+			}
+		}
+		
+		&.step-titles {
+			width: 100%;
+			div {
+				margin: 1em auto;
+				position: relative;
+				text-align: center;
+				text-transform: uppercase;
+				&.mobile-step-details {
+					text-transform: none;
+					text-align: left;
+					border-bottom: 2px solid $pink;
+					padding-bottom: 1em;
+					font-size: .85em;
+				}
+				
+			}
+		}
+		
+		&.step-details {
+			display: none;
+		}
+		
+	}
+	img {
+		margin: 3em auto 4em;
+	}
+}
+
+
+/******************************************************************
+CONTACT STYLES
+******************************************************************/
+
+.contact {
+	article {
+		display: block;
+		margin: 0 auto 4em auto;
+		vertical-align: top;
+		width: 250px;
+		&:nth-of-type(3) {
+			width: 90%;
+			p {
+				line-height: 1.5em;
+			}
+		}
+	}
+}
+
+.wpcf7 {
+	textarea, input {
+		background: $lightyellow;
+		border: none;
+		color: $darkgrey;
+		font-family: $sans-serif;
+		font-size: .75em;
+		font-weight: 300;
+		margin: 1em 1.25% 0;
+		padding: 1.75em;
+	}
+	textarea {
+		float: left;
+		height: 300px;
+		width: 50%;
+	}
+	input {
+		float: right;
+		width: 45%;
+		&[type=submit] {
+			border: 3px solid $darkyellow;
+			background: none;
+			color: $darkyellow;
+			font-size: 1.25em;
+			letter-spacing: 2px;
+			margin-top: 6.575em;
+			padding: .5em 0;
+			&:hover {
+				background: $darkyellow;
+				color: #fff;
+			}
+		}
+	}
+}
+::-webkit-input-placeholder { color: $darkgrey; }
+input:-moz-placeholder { color: $darkgrey; }
+::-moz-placeholder { color: $darkgrey; }
+input:-ms-input-placeholder { color: $darkgrey; }
+
+div.wpcf7 img.ajax-loader {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+	padding: 1em 0;
+	width: 16px;	
+}
+h3.contact {
+	font-weight: 300;
+	margin-left: 1.25%;
+	text-align: left;
+	text-transform: none;
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.floatbox {
+	li.categories {
+		list-style: none;
+		text-transform: uppercase;
+		border: 2px solid $grey;
+		margin-bottom: 6em;
+		h4 {
+			color: $white;
+			background: $pink;
+			padding: 10px 15px;
+			margin-top: 0;
+			margin-bottom: 0;
+			display: block;
+			text-align: center;
+			font-weight: 400;
+			font-size: .9em;
+		}
+		ul {
+			padding: 0 0.7em;
+			text-align: center;
+			li {
+				margin: 1em 0;
+				font-size: .8em;
+				line-height: 2.8em;
+				display: block;
+				margin: 0 .5em;
+				a {
+					color: $darkgrey;
+					&:hover {
+						color: $pink;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+.sign-up {
+	background: #dfdfdf;
+	font-size: .875em;
+	margin: 0 0 -3.5em;
+	padding: 1.5em 0 1em;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	label {
+		display: block;
+		margin: 0 0 1em;
+	}
+	input {
+		border: 1px solid #999;
+	}
+	input[type='email'] {
+		padding: 10px 80px;
+	}
+	input[type='submit'] {
+		background: #efefef;
+		color: $lightgrey;
+		letter-spacing: 1px;
+		font-size: .85em;
+		padding: 10px 15px;
+		&:hover {
+			background: $darkyellow;
+		}
+	}
+	::-webkit-input-placeholder { color: $lightgrey; font-size: 1em; }
+	input:-moz-placeholder { color: $lightgrey; font-size: 1em; }
+	::-moz-placeholder { color: $lightgrey; font-size: 1em; }
+	input:-ms-input-placeholder { color: $lightgrey; font-size: 1em; }
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+.site-footer {
+	background: $grey;
+	font-size: .875em;
+	margin: 3.5em 0 0;
+	padding: 3em 0;
+	position: relative;
+	.border {
+		height: 10px;
+		position: absolute;
+		top: -10px;
+		width: 100%;
+	}
+	p {
+		border: 1px solid $green;
+		margin: 0;
+		padding: .75em 0;
+		text-align: center;
+		text-transform: uppercase;
+		width: 100%;
+		a {
+			color: $green;
+			&:hover {
+				color: $link-hover;
+			}
+		}
+		&:first-of-type {
+			background: $green;
+			color: $white;
+		}
+		&:nth-of-type(2) {
+			background: transparent;
+			color: $green;
+		}
+	}
+	ul.social-icons {
+		margin: 2em 0 0;
+		text-align: center;
+		li {
+			display: inline-block;
+			a {
+				color: #808690;
+				text-decoration: none;
+				&:hover {
+					color: $green;
+				}	
+			}
+		}
+	}
+	.wave {
+		display: block;
+		margin: 2em auto;
+	}
+}

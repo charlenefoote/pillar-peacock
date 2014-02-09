@@ -1,0 +1,36 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: High Pixel Density Screens & Devices Stylesheet
+
+******************************************************************/
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+header ul.social-icons{
+	background: url(../images/pattern_victorian_border@2x.png) 0 -16px repeat;
+	background-size: 122px 95px;
+}
+
+/*********************
+Pages
+*********************/
+
+
+.contact {
+	article {
+		&:nth-of-type(3) {
+			font-size: .9em;
+			margin-left: 10px;
+			padding-top: 0;
+			width: 250px;
+			p {
+				line-height: 1.5em;
+			}
+		}
+	}
+}
+

@@ -1,0 +1,1 @@
+jQuery(window).width()>859&&jQuery(function(){var e=jQuery(".floatbox").offset(),t=65;jQuery(window).scroll(function(){jQuery(window).scrollTop()>e.top?jQuery(".floatbox").stop().animate({marginTop:jQuery(window).scrollTop()-e.top+t}):jQuery(".floatbox").stop().animate({marginTop:0})})});

@@ -1,0 +1,30 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Tablet Devices Stylesheet
+
+******************************************************************/
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.main-menu {
+	ul#menu-main-menu li {
+		
+		&#menu-item-68 a { width: 162px; }
+		&#menu-item-11 a { width: 200px; }
+		&#menu-item-13 a { width: 141px; }
+		&#menu-item-69 a { width: 100px; }
+		&#menu-item-10 a { width: 141px; }
+		
+	}
+	ul.social-icons {
+		li a {
+			padding: 11px;
+		}
+		li:last-child a {
+		}
+	}
+}

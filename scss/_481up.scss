@@ -1,0 +1,253 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to 
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection. 
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.scss styles.
+
+******************************************************************/
+
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+.wrap {
+	width: 460px;
+}
+
+
+/*********************
+HEADER SYTLES
+*********************/
+   
+.site-header {
+	h1 {
+		margin-top: 1em;
+	}
+	#tagline {
+		padding: .75em 1em;
+		letter-spacing: .3em;
+	}	
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+.main-menu ul#menu-main-menu {
+	float: none;
+	zoom: 1;
+	&:before, &:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+	li {
+	}
+}
+
+/*********************
+Pages
+*********************/
+
+.bios {
+	.stack-wrap {
+		width: 481px;
+	}
+	h3 {
+		letter-spacing: 2px;
+		width: 50%;
+	}
+}
+
+.bios .bio-left, .bios .bio-right {
+	#virginia, #tennessee {
+		height: auto;
+	}
+}
+
+.page-template-meet-php {
+	a.button-box {
+		width: 40%;
+	}
+}
+		
+
+.home-tiles {
+	width: 460px;
+	.post {
+		display: inline-block;
+		float: none;
+		img {
+			height: 100%;
+		}
+		&:nth-of-type(4n+1) {
+			margin: 0 10px 10px 0;
+			width: 67%;
+		}
+		&:nth-of-type(4n+2) {
+			margin: 0 0 10px 0;
+			width: 29.5%;
+		}
+		&:nth-of-type(4n+3) {
+			margin: 0 0 10px 0;
+			width: 29.5%;
+		}
+		&:nth-of-type(4n+4) {
+			margin: 0 0 10px 10px;
+			width: 67%;
+		}
+		.label-box {
+			bottom: 20px;
+			font-size: 1em;
+			margin: 0;
+			width: 100%;
+			span {
+				display: inline;
+			}
+		}
+	}
+}
+
+.label-box {
+	bottom: 30px;
+	font-size: .8em;
+	margin: 0 15%;
+	width: 70%;
+}
+
+.page-template-portfolio-php {
+	#container {
+    	width: 460px;
+	}
+	.brick {
+    	width: 228px;    	
+    	margin: 0;
+    	img {
+	    	width: 100%;
+    	}
+    }
+}
+
+.bios {
+	.stack-wrap {
+		width: 460px;
+	}
+}
+
+.poi-list {
+	li { 
+		cursor: pointer; 
+		display: block;
+		position: absolute; 
+		line-height: normal; 
+		min-width: 25px; 
+		min-height: 25px; 
+		background: url(../images/icon-poi.svg) no-repeat; 
+		z-index: 1; 
+		left: 20%;
+		top: 10%;
+		span{  
+			background: $pink;
+			color: #fff;
+			display: none; 
+			float: left;
+			font-size: 1em;
+			font-weight: 300;
+			letter-spacing: .15em; 
+			line-height: 30px;
+			margin-left: 40px;
+			padding: 3px 10px;
+			position: relative;
+			text-transform: uppercase;
+			top: -5px;
+		}
+		&:hover span { 
+			z-index: 500; 
+			display: block; 
+			&:before {
+				border-bottom: 10px solid transparent;
+			   	border-right: 10px solid $pink;
+			    border-top: 10px solid transparent;
+			    content: "";
+			    left: -10px;
+			    position: absolute;
+			    top: 8px;
+			    z-index: 9;
+			}
+		}
+		&:nth-child(2) {
+			left: 60%;
+			top: 25%;
+		}
+		&:nth-child(3) {
+			left: 10%;
+			top: 70%;
+		}
+		&:nth-child(4) {
+			left: 50%;
+			top: 65%;
+		}
+		&:nth-child(5) {
+			left: 68%;
+			top: 83%;
+		}
+	}
+}    
+
+
+.contact {
+	article {
+		display: inline-block;
+		margin-bottom: 3em;
+		vertical-align: top;
+		width: 49%;
+		margin-right: 2%;
+		float: left;
+		&:nth-of-type(2) {
+			margin-right: 0;	
+		}
+		&:nth-of-type(3) {
+			margin: 0 5% 3em;
+			width: 90%;
+			p {
+				line-height: 1.5em;
+			}
+		}
+		img {
+			height: auto;
+		}
+	}
+}
+
+.wpcf7 {
+	textarea, input {
+		font-size: 1em;
+	}
+	input[type=submit] {
+		margin-top: 3.6125em;
+	}
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.floatbox {
+	li.categories {
+		ul {
+			li {
+				display: inline-block;
+			}
+		}
+	}
+}
